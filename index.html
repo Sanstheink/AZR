@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>USS AZURA LCARS</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="bootScreen" class="screen active">
+  <div class="boot-text" id="bootLog"></div>
+  <div class="progress">
+    <div id="bootBar"></div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen">
+  <h1>STARFLEET SECURITY TERMINAL</h1>
+  <p>USS AZURA • NCC-1626-G</p>
+  <input id="authCode" placeholder="ENTER AUTHORIZATION CODE">
+  <button onclick="login()">AUTHORIZE</button>
+  <div id="loginStatus"></div>
+</div>
+
+<!-- MAIN INTERFACE -->
+<div id="mainUI" class="screen">
+  <header>
+    <span>USS AZURA</span>
+    <span id="roleLabel"></span>
+  </header>
+
+  <section class="panels">
+    <button onclick="alertShip('red')">🔴 RED ALERT</button>
+    <button onclick="alertShip('yellow')">🟡 YELLOW ALERT</button>
+    <button onclick="alertShip('blue')">🔵 BLUE ALERT</button>
+    <button onclick="reboot()">SYSTEM REBOOT</button>
+  </section>
+</div>
+
+<audio id="bootSound" src="assets/boot.mp3"></audio>
+<audio id="alertSound"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
