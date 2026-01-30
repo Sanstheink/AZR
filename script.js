@@ -61,15 +61,15 @@ function alertShip(type) {
 
   if (type === "red") {
     document.body.style.background = "#400";
-    audio.src = "assets/red_alert.mp3";
+    audio.src = "https://www.trekcore.com/audio/redalertandklaxons/tng_nemesis_intruder_alert.mp3";
   }
   if (type === "yellow") {
     document.body.style.background = "#440";
-    audio.src = "assets/yellow_alert.mp3";
+    audio.src = "https://www.trekcore.com/audio/aliensounds/romulan_alarm.mp3";
   }
   if (type === "blue") {
     document.body.style.background = "#004";
-    audio.src = "assets/blue_alert.mp3";
+    audio.src = "https://www.trekcore.com/audio/redalertandklaxons/voybluealert.mp3";
   }
 
   audio.play();
